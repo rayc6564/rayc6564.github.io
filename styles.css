@@ -30,7 +30,10 @@ h2 {
     border-radius: 10px;
     border-color: lightgrey;
     background-color: burlywood;
-
+}
+ul {
+    font-size: 15px;
+    margin-top: -15px;
 }
 p {
     font-size: 20px;
@@ -90,9 +93,14 @@ a.tel:hover{
     border:0;
 }
 a.email:hover{
-    color:aqua;
+    color:red;
     text-decoration: underline;
     border:0;
+}
+a.github:hover {
+    color:red;
+    text-decoration: underline;
+    border: 0;
 }
 a.chopstick{
     text-decoration: underline;
