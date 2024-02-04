@@ -114,6 +114,12 @@ a.github:hover {
     text-decoration: underline;
     border: 0;
 }
+link {
+    color:beige;
+    text-decoration: none;
+    text-decoration: solid;
+    border:0;
+}
 a.chopstick{
     text-decoration: underline;
     color:black;
