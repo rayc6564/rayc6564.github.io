@@ -99,27 +99,16 @@ a:visited{
     text-decoration: none;
 
 }
-a.tel:hover{
+links {
+    text-decoration: none;
+}
+
+link:hover {
     color: red;
     text-decoration: underline;
     border:0;
 }
-a.email:hover{
-    color:red;
-    text-decoration: underline;
-    border:0;
-}
-a.github:hover {
-    color:red;
-    text-decoration: underline;
-    border: 0;
-}
-link {
-    color:beige;
-    text-decoration: none;
-    text-decoration: solid;
-    border:0;
-}
+
 a.chopstick{
     text-decoration: underline;
     color:black;
