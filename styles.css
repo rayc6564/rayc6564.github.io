@@ -1,0 +1,142 @@
+body {
+    background-color:gainsboro;
+    margin: 0;
+    padding: 0
+}
+h1 {
+    text-align: center;
+    border: 2px solid;
+    background-color: #333;
+    padding: 2em;
+    margin: 0;
+    font-size: 40px;
+}
+h1 text {
+    color:#fff;
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+p text{
+    position: absolute;
+    top: 25%;
+}
+h2 {
+    border: 2px solid;
+    padding: 20px;
+    margin: 40px;
+    font-size: 30px;
+    border-radius: 10px;
+    border-color: lightgrey;
+    background-color: burlywood;
+}
+ul {
+    font-size: 15px;
+    margin-top: -15px;
+}
+.bullet {
+    font-size: 20px;
+}
+.description {
+    border: 2px solid;
+    padding: 20px;
+    margin: 10px 0;
+    font-size: 20px;
+    border-radius: 10px;
+    border-color: lightgrey;
+    background-color: burlywood;
+}
+p {
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+}
+h3 {
+    position: absolute;
+    border: 2px solid;
+    border-radius: 5px;
+    border-color: whitesmoke;
+    padding: 5px 30px;
+    border-top: white;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    top: -18px;
+    color: white;
+}
+h3.text1 {
+    left: 5%;
+}
+h3.text2 {
+    left: 23%;
+}
+h3.text3 {
+    left: 43%;
+}
+h3.text4 {
+    left: 63%;
+}
+h3.text5 {
+    left: 80%;
+}
+h3 a {
+    text-decoration: none;
+    color: white;
+}
+h3 a:hover{
+    color: darkgrey
+}
+a {
+    text-decoration: none;
+}
+a:hover{
+    color: darkgray;
+    border: 2px solid;
+    border-radius: 5px;
+
+}
+a:visited{
+    color:black;
+    text-decoration: none;
+
+}
+links {
+    text-decoration: none;
+}
+
+link:hover {
+    color: red;
+    text-decoration: underline;
+    border:0;
+}
+
+a.chopstick{
+    text-decoration: underline;
+    color:black;
+    border:none;
+}
+a.chopstick:hover{
+    text-decoration: none;
+    color:azure;
+}
+
+.container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50%;
+    height: 50%;
+    background-color: beige;
+    border-radius: 2px;
+}
+
+.header {
+    text-align: center;
+    font-size: 50px;
+    color:deepskyblue;
+    font-weight: bold;
+}
+.content {
+    font-size: 50px;
+    text-align: center;
+}
