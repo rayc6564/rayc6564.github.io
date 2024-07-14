@@ -6,7 +6,7 @@ kaboom({
     debug: true,
     maxFrameRate: 60,
     clearColor: [0, 0, 0, 1],
-    width: window.innerWidth / 2,
+    width: window.innerWidth,
     height: window.innerHeight,
 });
 
