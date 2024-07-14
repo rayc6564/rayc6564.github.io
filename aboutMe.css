@@ -317,7 +317,7 @@ li {
 
 /* Media queries for smaller screens */
 
-@media (max-width: 600px) {
+@media (min-width: 100px) and (max-width: 560px)  {
     .menu-dropdown {
         padding: 10px;
     }

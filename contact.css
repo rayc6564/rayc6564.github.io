@@ -73,25 +73,6 @@ h1{
     margin-bottom: 10px;
 }
 
-
-@keyframes everything {
-    0% {
-        transform: translate(-50%, -50%) rotate(0deg) translateX(50px) rotate(0deg) rotate3d(1, 1, 1, 0deg);
-    }
-    100% {
-        transform: translate(-50%, -50%) rotate(360deg) translateX(50px) rotate(-360deg) rotate3d(1, 1, 1, 360deg);
-    }
-}
-
-#yinyangRC{
-    animation: everything infinite 3s;
-    width: 120px;
-    height: 120px;
-    position: absolute;
-    top: 30em;
-    left: 20%;
-}
-
 .contacts{
     border: 2px;
     padding: 10px;
@@ -115,3 +96,4 @@ p{
     font-size: 18px;
     color: lightslategray;
 }
+

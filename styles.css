@@ -12,3 +12,12 @@ body, html {
     justify-content: center;
     align-items: center;
 }
+
+.instruction{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    color: white;
+    font-size: 12px;
+    text-align: center;
+}

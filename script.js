@@ -6,7 +6,7 @@ kaboom({
     debug: true,
     maxFrameRate: 60,
     clearColor: [0, 0, 0, 1],
-    width: window.innerWidth,
+    width: window.innerWidth / 2 + 200,
     height: window.innerHeight,
 });
 
@@ -142,10 +142,6 @@ scene("game", () => {
     addPlatform(10, height(), 0, 0, 0.5);
 
     movement(player);
-
-    addText("Use a and d to move, and press space to jump", 12, width() / 2, 120);
-    addText("Go and hit the portfolio to proceed or click on it if you don't want to play", 12, 12, 180);
-    addText("For mobile, sorry you can't play, you need to click on the portfolio to proceeed", 12, 12, height() / 2);
 
 
     // long boxes
