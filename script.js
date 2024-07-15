@@ -11,7 +11,7 @@ kaboom({
 });
 
 
-loadSprite("player-movement", "player-movement.png", {
+loadSprite("player-movement", "images/player-movement.png", {
     sliceX: 9,
     sliceY: 1,
     anims: {

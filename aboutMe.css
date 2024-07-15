@@ -317,20 +317,97 @@ li {
 
 /* Media queries for smaller screens */
 
-@media (min-width: 100px) and (max-width: 560px)  {
-    .menu-dropdown {
-        padding: 10px;
+@media (max-width: 560px)  {
+    .menu-dropdown{
+        display: inline-block;
+        gap: 20px;
+        position: fixed;
+        left: 83%;
+        top: 2em;
     }
-    #menu-btn {
-        font-size: 1.25rem;
-        padding: 5px 10px;
+    
+    #menu-btn{
+        position: relative;
+        right: 13px;
+        margin-bottom: 20px;
+        border-radius: 5px;
+        font-size: 15px;
+        width: 100px;
     }
-    .button-container {
-        flex-direction: column;
-        gap: 10px;
+    
+    .dropdown-btns{
+        display: none;
     }
-    .links-container {
-        flex-direction: column;
+    
+    .dropdown-btns button{
+        display: block;
+        z-index: 1;
+        border-radius: 10px;
+        width: 70px;
+        margin-bottom: 10px;
+        
+        /* horizontal, vertical, blur radius, spread radius */
+        box-shadow: 0 10px 100px 10px rgba(0, 0, 0, 0.5);
+    }
+    
+    #menu-btn:hover + .dropdown-btns{
+        display: block;
+    }
+    
+    @keyframes drop-down {
+        from{
+            transform: translateY(-100vh);
+        }
+    
+        to{
+            transform: translateY(0);
+        }
+    }
+    
+    @keyframes go-up {
+        from{
+            transform: translateY(100vh);
+        }
+    
+        to{
+            transform: translateY(0);
+        }
+    }
+    
+    @keyframes to-right {
+        from{
+            transform: translateX(-100vh);
+        }
+    
+        to{
+            transform: translateX(0);
+        }
+    }
+    
+    @keyframes to-left {
+        from{
+            transform: translateX(200vh);
+        }
+    
+        to{
+            transform: translateX(0);
+        }
+    }
+    
+    #work{
+        animation: drop-down 1s ease-in;
+    }
+    
+    #project{
+        animation: to-right 1s ease-in;
+    }
+    
+    #contact{
+        animation: to-left 1s ease-in;
+    }
+    
+    #resume{
+        animation: go-up 1s ease-in;
     }
     .gt-container {
         width: 100%;
@@ -339,10 +416,24 @@ li {
     #skill-btn {
         width: 100%;
         font-size: 1rem;
+        font-style: normal;
     }
     #coding-dude2, #basketball, #origami-sword, #origami-bird {
         width: 50%;
         height: auto;
         max-width: 100px;
+    }
+
+    .language-know{
+        width: 90vh;
+    }
+    
+    .tools{
+        width: 90vh;
+    }
+
+    .skills-container img, .tools-container img {
+        width: 50px;
+        height: 50px;
     }
 }
