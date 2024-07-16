@@ -52,14 +52,14 @@ h1 {
     cursor: pointer;
 }
 
-.button-container {
+.dropdown-btns {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     gap: 20px;
 }
 
-.button-container button {
+.dropdown-btns button {
     border-radius: 5px;
     padding: 5px 10px;
     font-size: 1rem;
@@ -143,13 +143,23 @@ h1 {
     border-color: transparent #000 transparent transparent;
 }
 
+a{
+    text-decoration: none;
+    color: yellow;
+}
+
+a:hover{
+    color: white;
+}
+
 @media (max-width: 560px)  {
     .menu-dropdown{
         display: inline-block;
         gap: 20px;
         position: fixed;
-        left: 83%;
+        left: 75%;
         top: 2em;
+        background-color: transparent;
     }
     
     #menu-btn{
@@ -169,7 +179,7 @@ h1 {
         display: block;
         z-index: 1;
         border-radius: 10px;
-        width: 70px;
+        width: auto;
         margin-bottom: 10px;
         
         /* horizontal, vertical, blur radius, spread radius */
@@ -220,25 +230,31 @@ h1 {
         }
     }
     
-    #work{
+    #about{
+        position: relative;
+        right: 10px;
         animation: drop-down 1s ease-in;
     }
     
-    #project{
+    #work{
+        position: relative;
+        left: 5px;
         animation: to-right 1s ease-in;
     }
     
-    #contact{
+    #project{
         animation: to-left 1s ease-in;
     }
     
-    #resume{
+    #contact{
+        position: relative;
+        right: 3px;
         animation: go-up 1s ease-in;
     }
 
     .container-left, .container-right {
         position: relative;
-        width: 70%;
+        width: 50%;
         padding: 20px;
         box-sizing: border-box;
     }

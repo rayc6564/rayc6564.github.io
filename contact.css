@@ -58,14 +58,14 @@ h1{
     cursor: pointer;
 }
 
-.button-container {
+.dropdown-btns {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     gap: 20px;
 }
 
-.button-container button {
+.dropdown-btns button {
     border-radius: 5px;
     padding: 5px 10px;
     font-size: 1rem;
@@ -97,3 +97,105 @@ p{
     color: lightslategray;
 }
 
+@media (max-width: 560px)  {
+    .menu-dropdown{
+        display: inline-block;
+        gap: 20px;
+        position: fixed;
+        left: 75%;
+        top: 2em;
+        background-color: transparent;
+    }
+    
+    #menu-btn{
+        position: relative;
+        right: 13px;
+        margin-bottom: 20px;
+        border-radius: 5px;
+        font-size: 15px;
+        width: 100px;
+    }
+    
+    .dropdown-btns{
+        display: none;
+    }
+    
+    .dropdown-btns button{
+        display: block;
+        z-index: 1;
+        border-radius: 10px;
+        width: auto;
+        margin-bottom: 10px;
+        
+        /* horizontal, vertical, blur radius, spread radius */
+        box-shadow: 0 10px 100px 10px rgba(0, 0, 0, 0.5);
+    }
+    
+    #menu-btn:hover + .dropdown-btns{
+        display: block;
+    }
+    
+    @keyframes drop-down {
+        from{
+            transform: translateY(-100vh);
+        }
+    
+        to{
+            transform: translateY(0);
+        }
+    }
+    
+    @keyframes go-up {
+        from{
+            transform: translateY(100vh);
+        }
+    
+        to{
+            transform: translateY(0);
+        }
+    }
+    
+    @keyframes to-right {
+        from{
+            transform: translateX(-100vh);
+        }
+    
+        to{
+            transform: translateX(0);
+        }
+    }
+    
+    @keyframes to-left {
+        from{
+            transform: translateX(200vh);
+        }
+    
+        to{
+            transform: translateX(0);
+        }
+    }
+    
+    #about{
+        position: relative;
+        right: 10px;
+        animation: drop-down 1s ease-in;
+    }
+    
+    #work{
+        position: relative;
+        left: 5px;
+        animation: to-right 1s ease-in;
+    }
+    
+    #project{
+        position: relative;
+        right: 2px;
+        animation: to-left 1s ease-in;
+    }
+    
+    #resume{
+        position: relative;
+        right: 7px;
+        animation: go-up 1s ease-in;
+    }
+}

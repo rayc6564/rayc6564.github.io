@@ -23,6 +23,10 @@ educationBtn.addEventListener("click", () =>{
 })
 
 document.getElementById('menu-btn').addEventListener('click', function() {
-    const buttonContainer = document.querySelector('.button-container');
-    buttonContainer.classList.toggle('show');
+    const dropdown = document.querySelector('.dropdown-btns');
+    if (dropdown.style.display === 'block') {
+        dropdown.style.display = 'none';
+    } else {
+        dropdown.style.display = 'block';
+    }
 });

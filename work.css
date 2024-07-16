@@ -57,14 +57,14 @@ h1{
     cursor: pointer;
 }
 
-.button-container {
+.dropdown-btns {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     gap: 20px;
 }
 
-.button-container button {
+.dropdown-btns button {
     border-radius: 5px;
     padding: 5px 10px;
     font-size: 1rem;
@@ -153,8 +153,9 @@ li{
         display: inline-block;
         gap: 20px;
         position: fixed;
-        left: 83%;
+        left: 75%;
         top: 2em;
+        background-color: transparent;
     }
     
     #menu-btn{
@@ -168,13 +169,15 @@ li{
     
     .dropdown-btns{
         display: none;
+        position: relative;
+        right: 5px;
     }
     
     .dropdown-btns button{
         display: block;
         z-index: 1;
         border-radius: 10px;
-        width: 70px;
+        width: auto;
         margin-bottom: 10px;
         
         /* horizontal, vertical, blur radius, spread radius */
@@ -225,7 +228,9 @@ li{
         }
     }
     
-    #work{
+    #about{
+        position: relative;
+        right: 4px;
         animation: drop-down 1s ease-in;
     }
     
@@ -234,14 +239,20 @@ li{
     }
     
     #contact{
+        position: relative;
+        right: 1px;
         animation: to-left 1s ease-in;
     }
     
     #resume{
+        position: relative;
+        left: 2px;
         animation: go-up 1s ease-in;
     }
 
     .work-container{
         width: 50%;
+        position: relative;
+        left: 22%;
     }
 }

@@ -26,7 +26,8 @@ petBtn.addEventListener("click", () => {
 petHideContainer.addEventListener("click", () => {
     petBtn.classList.remove("hidden");
     petHideContainer.classList.add("hidden");
-})
+});
+
 cleaningBtn.addEventListener("click", () => {
     cleaningBtn.classList.add("hidden");
     cleaningHideContainer.classList.remove("hidden");
@@ -35,4 +36,13 @@ cleaningBtn.addEventListener("click", () => {
 cleaningHideContainer.addEventListener("click", () => {
     cleaningBtn.classList.remove("hidden");
     cleaningHideContainer.classList.add("hidden");
-})
+});
+
+document.getElementById('menu-btn').addEventListener('click', function() {
+    const dropdown = document.querySelector('.dropdown-btns');
+    if (dropdown.style.display === 'block') {
+        dropdown.style.display = 'none';
+    } else {
+        dropdown.style.display = 'block';
+    }
+});

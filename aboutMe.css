@@ -52,14 +52,14 @@ h1, h3 {
     cursor: pointer;
 }
 
-.button-container {
+.dropdown-btns {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     gap: 20px;
 }
 
-.button-container button {
+.dropdown-btns button {
     border-radius: 5px;
     padding: 5px 10px;
     font-size: 1rem;
@@ -286,7 +286,7 @@ li {
 
 @keyframes slideInTop {
     0% {
-        transform: translateY(-350px) rotateY(0deg); /* Initial state */
+        transform: translateY(-20vh) rotateY(0deg); /* Initial state */
     }
     100% {
         transform: translateY(0) rotateY(360deg); /* End state */
@@ -322,8 +322,9 @@ li {
         display: inline-block;
         gap: 20px;
         position: fixed;
-        left: 83%;
+        left: 75%;
         top: 2em;
+        background-color: transparent;
     }
     
     #menu-btn{
@@ -337,13 +338,14 @@ li {
     
     .dropdown-btns{
         display: none;
+        position: relative;
+        right: 3px;
     }
     
     .dropdown-btns button{
         display: block;
         z-index: 1;
         border-radius: 10px;
-        width: 70px;
         margin-bottom: 10px;
         
         /* horizontal, vertical, blur radius, spread radius */
@@ -395,18 +397,26 @@ li {
     }
     
     #work{
+        position: relative;
+        left: 10px;
         animation: drop-down 1s ease-in;
     }
     
     #project{
+        position: relative;
+        right: 1px;
         animation: to-right 1s ease-in;
     }
     
     #contact{
+        position: relative;
+        right: 3px;
         animation: to-left 1s ease-in;
     }
     
     #resume{
+        position: relative;
+        right: 1px;
         animation: go-up 1s ease-in;
     }
     .gt-container {
@@ -419,21 +429,50 @@ li {
         font-style: normal;
     }
     #coding-dude2, #basketball, #origami-sword, #origami-bird {
-        width: 50%;
-        height: auto;
+        width: 100px;
+        height: 100px;
         max-width: 100px;
     }
 
-    .language-know{
-        width: 90vh;
-    }
-    
-    .tools{
-        width: 90vh;
+    #origami-bird{
+        top: 120%;
     }
 
-    .skills-container img, .tools-container img {
-        width: 50px;
-        height: 50px;
+    #basketball{
+        top: 15%;
+        left: 2%;
+    }
+
+    #coding-dude2{
+        left: 40%;
+        top: 20px;
+    }
+
+    #origami-sword{
+        top: 120%;
+    }
+
+    #language-text{
+        margin-left: 50px;
+    }
+
+    .skills-container, .tools-container{
+        width: 85vh;
+    }
+
+    #vs-code{
+        position: relative;
+        bottom: 35px;
+    }
+
+    .skills-container img{
+        width: 100px;
+        height: 100px;
+        margin-right: 30px;
+    }
+
+    .tools-container img{
+        width: 60px;
+        height: 60px;
     }
 }
