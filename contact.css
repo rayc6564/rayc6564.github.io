@@ -97,7 +97,7 @@ p{
     color: lightslategray;
 }
 
-@media (max-width: 560px)  {
+@media (min-width: 100px) and (max-width: 560px)  {
     .menu-dropdown{
         display: inline-block;
         gap: 20px;
