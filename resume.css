@@ -152,7 +152,7 @@ a:hover{
     color: white;
 }
 
-@media(min-width: 100px) and (max-width: 560px)  {
+@media (max-width: 560px)  {
     .menu-dropdown{
         display: inline-block;
         gap: 20px;
@@ -260,7 +260,7 @@ a:hover{
     }
 
     .last-content{
-        width: auto;
+        width: 80%;
     }
 
 }

@@ -317,7 +317,7 @@ li {
 
 /* Media queries for smaller screens */
 
-@media (min-width: 100px) and  (max-width: 560px)  {
+@media (max-width: 560px)  {
     .menu-dropdown{
         display: inline-block;
         gap: 20px;
@@ -462,6 +462,7 @@ li {
 
     #vs-code{
         position: relative;
+        left: 10px;
         bottom: 35px;
     }
 
@@ -470,8 +471,6 @@ li {
         height: 60px;
         margin-right: 30px;
     }
-
-    
 
     .tools-container img{
         width: 60px;
