@@ -154,6 +154,16 @@ h1 {
     color: white
 }
 
+
+
+@media (min-width: 570px) and (max-width: 970px){
+    .projects, .projects2{
+        width: 600px;
+        height: 500px;
+        margin-left: 55px;
+    }
+}
+
 @media (max-width: 560px)  {
     .menu-dropdown{
         display: inline-block;

@@ -152,7 +152,7 @@ scene("game", () => {
     addBox(60, 20, width() / 2 - 10, height() - 400, 0, 0, 0, "box");
 
 
-    addBox(80, 50, width() / 2 - 40, 15, 0, 0, 0, "link-box");
+    addBox(100, 50, width() / 2 - 40, 15, 0, 0, 0, "link-box");
     addText("Portfolio", 15, width() / 2 - 38, 30, 0, 0, 0, "link-text");
 
     onClick("link-box", () =>{

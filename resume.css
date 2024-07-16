@@ -258,4 +258,9 @@ a:hover{
         padding: 20px;
         box-sizing: border-box;
     }
+
+    .last-content{
+        width: auto;
+    }
+
 }
