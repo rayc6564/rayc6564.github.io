@@ -185,7 +185,7 @@ li{
     }
     
     #menu-btn:focus + .dropdown-btns, .dropdown-btns:hover{
-        display: flex;
+        display: block;
     }
     
     @keyframes drop-down {
