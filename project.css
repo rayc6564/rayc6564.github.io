@@ -6,7 +6,7 @@ body {
     justify-content: center;
     font-family: 'Times New Roman', Times, serif;
     overflow-y: auto;
-    padding: 0 10px; /* Add padding for small screens */
+    padding: 0 10px;
 }
 
 /* Webkit Scrollbar */
@@ -153,8 +153,6 @@ h1 {
 #the-link a:hover, #video-link a:hover, #web-link a:hover{
     color: white
 }
-
-
 
 @media (min-width: 570px) and (max-width: 970px){
     .projects, .projects2{
