@@ -131,8 +131,8 @@ p{
         box-shadow: 0 10px 100px 10px rgba(0, 0, 0, 0.5);
     }
     
-    #menu-btn:hover + .dropdown-btns{
-        display: block;
+    #menu-btn:focus + .dropdown-btns, .dropdown-btns:hover{
+        display: flex;
     }
     
     @keyframes drop-down {
