@@ -1,0 +1,258 @@
+body {
+    background: linear-gradient(to bottom, #87ceeb, #e6f7ff);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Times New Roman', Times, serif;
+    overflow-y: auto;
+}
+
+/* Webkit Scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+h1{
+    margin-top: 7rem;
+    text-align: center;
+}
+
+.menu-dropdown {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: lightgray;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 9999;
+}
+
+.menu-dropdown button {
+    margin: 5px;
+}
+
+.link-btn button img{
+    display: flex;
+    width: 50px;
+    height: 50px;
+    border-radius: 20px;
+}
+
+#menu-btn {
+    border: none;
+    background-color: lightgray;
+    padding: 10px 20px;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.dropdown-btns {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.dropdown-btns button {
+    border-radius: 5px;
+    padding: 5px 10px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+.work-experience{
+    width: 700px;
+}
+
+.work-container {
+    border: 2px solid;
+    border-radius: 10px;
+    margin: 20px;
+    background-color: #555;
+    cursor: pointer;
+    text-align: left;
+    width: 100%;
+    padding: 10px;
+    transition: background-color 0.3s;
+}
+
+.work-container:hover {
+    background-color: #777;
+}
+
+#title {
+    font-size: 20px;
+    color: lightgoldenrodyellow;
+    margin: 0 0 5px 0;
+    text-align: center;
+}
+
+#dates {
+    text-align: center;
+    margin: 0;
+    color: yellow;
+}
+
+#chopsticks-link{
+    display: flex;
+    justify-content: center;
+}
+
+a{
+    display: flex;
+    text-decoration: none;
+    color: #87ceeb;
+    width: 190px;
+}
+
+a:active{
+    text-decoration: none;
+    color: #87ceeb;
+}
+
+a:hover{
+    color: azure;
+    cursor: grab;
+}
+
+#instructions{
+    font-size: 12px;
+    color: white;
+    text-align: center;
+}
+
+ul{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+li{
+    color: white;
+    font-size: 20px;
+}
+
+.hidden {
+    display: none;
+}
+
+@media (max-width: 560px)  {
+    .menu-dropdown{
+        display: inline-block;
+        gap: 20px;
+        position: fixed;
+        left: 75%;
+        top: 2em;
+        background-color: transparent;
+    }
+    
+    #menu-btn{
+        position: relative;
+        right: 13px;
+        margin-bottom: 20px;
+        border-radius: 5px;
+        font-size: 15px;
+        width: 100px;
+    }
+    
+    .dropdown-btns{
+        display: none;
+        position: relative;
+        right: 5px;
+    }
+    
+    .dropdown-btns button{
+        display: block;
+        z-index: 1;
+        border-radius: 10px;
+        width: auto;
+        margin-bottom: 10px;
+        
+        /* horizontal, vertical, blur radius, spread radius */
+        box-shadow: 0 10px 100px 10px rgba(0, 0, 0, 0.5);
+    }
+    
+    #menu-btn:focus + .dropdown-btns, .dropdown-btns:hover{
+        display: block;
+    }
+    
+    @keyframes drop-down {
+        from{
+            transform: translateY(-100vh);
+        }
+    
+        to{
+            transform: translateY(0);
+        }
+    }
+    
+    @keyframes go-up {
+        from{
+            transform: translateY(100vh);
+        }
+    
+        to{
+            transform: translateY(0);
+        }
+    }
+    
+    @keyframes to-right {
+        from{
+            transform: translateX(-100vh);
+        }
+    
+        to{
+            transform: translateX(0);
+        }
+    }
+    
+    @keyframes to-left {
+        from{
+            transform: translateX(200vh);
+        }
+    
+        to{
+            transform: translateX(0);
+        }
+    }
+    
+    #about{
+        position: relative;
+        right: 4px;
+        animation: drop-down 1s ease-in;
+    }
+    
+    #project{
+        animation: to-right 1s ease-in;
+    }
+    
+    #contact{
+        position: relative;
+        right: 1px;
+        animation: to-left 1s ease-in;
+    }
+    
+    #resume{
+        position: relative;
+        left: 2px;
+        animation: go-up 1s ease-in;
+    }
+
+    .work-container{
+        width: 50%;
+        position: relative;
+        left: 22%;
+    }
+}

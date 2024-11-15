@@ -1,0 +1,272 @@
+body {
+    background: linear-gradient(to bottom, #87ceeb, #e6f7ff);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Times New Roman', Times, serif;
+    overflow-y: auto;
+    padding: 0 10px;
+}
+
+/* Webkit Scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+h1 {
+    margin-top: 7rem;
+    text-align: center;
+}
+
+.menu-dropdown {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: lightgray;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 9999;
+    
+}
+
+.menu-dropdown button {
+    margin: 5px;
+}
+
+#menu-btn {
+    border: none;
+    background-color: lightgray;
+    padding: 10px 20px;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.dropdown-btns {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.dropdown-btns button {
+    border-radius: 5px;
+    padding: 5px 10px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+.links-container {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.links-container button {
+    border-radius: 50%;
+}
+
+.external-links {
+    background: linear-gradient(to bottom, #2683a8, #e6f7ff);
+    position: fixed;
+    border: 2px solid black;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 10px 0 10px 0;
+    border-radius: 5px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-left: none;
+}
+
+.external-links button img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+
+.external-links button {
+    background-color: transparent;
+    border-color: aliceblue;
+}
+
+.projects, .projects2{
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+}
+
+.projects2{
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+
+#game-title{
+    display: flex;
+    justify-content: center;
+    margin-top: 2px;
+}
+
+.num-guess-container, .top-down-container, .zombie-survival-container, .college-calculator-container{
+    border: 2px solid;
+    border-radius: 10px;
+    width: 400px;
+    padding: 5px;
+    background: linear-gradient(to right, lightgray, #888);
+}
+
+.zombie-survival-container, .college-calculator-container{
+    background: linear-gradient(to right, #888 ,lightgray);
+}
+
+.links{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 50px;
+}
+
+#the-link, #video-link, #web-link{
+    display: flex;
+    justify-content: center;
+}
+
+#the-link a, #video-link a, #web-link a{
+    text-decoration: none;
+    color: yellow;
+}
+
+#the-link a:hover, #video-link a:hover, #web-link a:hover{
+    color: white
+}
+
+@media (min-width: 570px) and (max-width: 970px){
+    .projects, .projects2{
+        width: 600px;
+        height: 500px;
+        margin-left: 55px;
+    }
+}
+
+@media (max-width: 560px)  {
+    .menu-dropdown{
+        display: inline-block;
+        gap: 20px;
+        position: fixed;
+        left: 75%;
+        top: 2em;
+        background-color: transparent;
+    }
+    
+    #menu-btn{
+        position: relative;
+        right: 13px;
+        margin-bottom: 20px;
+        border-radius: 5px;
+        font-size: 15px;
+        width: 100px;
+    }
+    
+    .dropdown-btns{
+        display: none;
+    }
+    
+    .dropdown-btns button{
+        display: block;
+        z-index: 1;
+        border-radius: 10px;
+        width: auto;
+        margin-bottom: 10px;
+        
+        /* horizontal, vertical, blur radius, spread radius */
+        box-shadow: 0 10px 100px 10px rgba(0, 0, 0, 0.5);
+    }
+    
+    #menu-btn:focus + .dropdown-btns, .dropdown-btns:hover{
+        display: block;
+    }
+    
+    @keyframes drop-down {
+        from{
+            transform: translateY(-100vh);
+        }
+    
+        to{
+            transform: translateY(0);
+        }
+    }
+    
+    @keyframes go-up {
+        from{
+            transform: translateY(100vh);
+        }
+    
+        to{
+            transform: translateY(0);
+        }
+    }
+    
+    @keyframes to-right {
+        from{
+            transform: translateX(-100vh);
+        }
+    
+        to{
+            transform: translateX(0);
+        }
+    }
+    
+    @keyframes to-left {
+        from{
+            transform: translateX(200vh);
+        }
+    
+        to{
+            transform: translateX(0);
+        }
+    }
+    
+    #about{
+        position: relative;
+        right: 10px;
+        animation: drop-down 1s ease-in;
+    }
+    
+    #work{
+        position: relative;
+        left: 5px;
+        animation: to-right 1s ease-in;
+    }
+    
+    #contact{
+        position: relative;
+        right: 7px;
+        animation: to-left 1s ease-in;
+    }
+    
+    #resume{
+        position: relative;
+        right: 5px;
+        animation: go-up 1s ease-in;
+    }
+
+    .projects, .projects2{
+        flex-direction: column;
+        width: 500px;
+        margin-left: 100px;
+    }
+}

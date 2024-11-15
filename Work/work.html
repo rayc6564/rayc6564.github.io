@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="work.css">
+    <link rel="icon" href="../images/yinyangRC.png" type="image/png">
+    <title>Work Experience</title>
+</head>
+<body>
+    <div class="menu-dropdown">
+        <button id="menu-btn">Menu</button>
+        <div class="dropdown-btns">
+            <button id="about" type="button" onclick="location.href='../AboutMe/aboutMe.html'">About Me</button>
+            <button id="project" type="button" onclick="location.href='../Project/project.html'">Projects</button>
+            <button id="contact" type="button" onclick="location.href='../Contact/contact.html'">Contacts</button>
+            <button id="resume" type="button" onclick="location.href='../Resume/resume.html'">Resume</button>
+        </div>
+    </div>
+    <h1>Work Experience</h1>
+    <div class="work-experience">
+        <button class="work-container chopsticks-container">
+            <p id="title">Chopsticks</p>
+            <p id="dates">April 2019 - Present</p>
+            <p id="instructions">Click on the tab to learn more</p>
+        </button>
+        <!-- the hidden work -->
+        <button class="work-container chopsticks-container-hide hidden">
+            <p id="title">Chopsticks</p>
+            <p id="chopsticks-link"><a href="https://www.chopstickseastcobb.com" target="_blank">Link to the restaurant web page</a></p>
+            <p id="summary">
+                <ul>
+                    <li>Take care of the customers and bag the food in the kitchen</li>
+                    <li>Delivery food to customers house when the orders gets back up</li>
+                    <li>Handle any minor complains from customers</li>
+                </ul>
+            </p>
+        </button>
+
+        <button class="work-container pet-container">
+            <p id="title">Pet Sitting</p>
+            <p id="dates">May 2015 - May 2018</p>
+            <p id="instructions">Click on the tab to learn more</p>
+        </button>
+        <!-- hidden work -->
+        <button class="work-container pet-container-hide hidden">
+            <p id="title">Pet Sitting</p>
+            <p id="summary">
+                <ul>
+                    <li>Provide care for the pets, including administering medications</li>
+                    <li>Ensure the pets has received adequate attention and activities such as exercising if its an outdoor pets</li>
+                </ul>
+            </p>        
+        </button>
+
+        <button class="work-container cleaning-container">
+            <p id="title">House and Lawn Care</p>
+            <p id="dates">June 2015 - August 2018</p>
+            <p id="instructions">Click on the tab to learn more</p>
+        </button>
+        <!-- hidden work -->
+        <button class="work-container cleaning-container-hide hidden">
+            <p id="title">House and Lawn Care</p>
+            <p id="summary">
+                <ul>
+                    <li>Clean the inside of the house for each floor and each room</li>
+                    <li>Help cut the lawn with friends in the summer time</li>
+                    <li>Also help rearranging furniture, or move in furniture, or just help carrying large object from one place to another/li>
+                </ul>
+            </p>
+        </button>
+    </div>
+    <script src="work.js"></script>
+</body>
+</html>
