@@ -160,7 +160,7 @@ scene("game", () => {
     });
 
     player.onCollide("link-box", () =>{
-        location.href="aboutMe.html";
+        location.href="AboutMe/aboutMe.html";
     });
 
 });
