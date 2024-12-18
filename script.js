@@ -156,11 +156,11 @@ scene("game", () => {
     addText("Portfolio", 15, width() / 2 - 38, 30, 0, 0, 0, "link-text");
 
     onClick("link-box", () =>{
-        window.location.href = "aboutMe.html";
+        window.location.href = "../AboutMe/aboutMe.html";
     });
 
     player.onCollide("link-box", () =>{
-        location.href="AboutMe/aboutMe.html";
+        location.href="../AboutMe/aboutMe.html";
     });
 
 });

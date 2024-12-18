@@ -104,7 +104,7 @@ h1 {
     border-color: aliceblue;
 }
 
-.projects, .projects2{
+.projects, .projects2, .project3{
     display: flex;
     flex-direction: row;
     gap: 50px;
@@ -121,7 +121,9 @@ h1 {
     margin-top: 2px;
 }
 
-.num-guess-container, .top-down-container, .zombie-survival-container, .college-calculator-container{
+.num-guess-container, .top-down-container, 
+.zombie-survival-container, .college-calculator-container, 
+.wandersync-container{
     border: 2px solid;
     border-radius: 10px;
     width: 400px;
