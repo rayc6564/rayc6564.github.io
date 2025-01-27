@@ -148,6 +148,12 @@ li{
     display: none;
 }
 
+p {
+    color: white;
+    font-size: 20px;
+    text-align: center;
+}
+
 @media (max-width: 560px)  {
     .menu-dropdown{
         display: inline-block;
