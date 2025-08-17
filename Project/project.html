@@ -9,6 +9,7 @@
 </head>
 <body>
     <h1>Projects</h1>
+    
     <div class="menu-dropdown">
         <button id="menu-btn">Menu</button>
         <div class="dropdown-btns">
@@ -18,54 +19,81 @@
             <button id="resume" type="button" onclick="location.href='../Resume/resume.html'">Resume</button>
         </div>
     </div>
+
     <div class="projects">
-        <div class="wandersync-container">
-            <h3 id="game-title">WanderSync</h3>
+
+        <!-- Sport Oracle -->
+        <div class="project-card">
+            <h3 class="game-title">Sport Oracle</h3>
+            <p class="project-dates">July 2025 - Present</p>
             <div class="links">
-                <p id="the-link"><a href="https://github.com/rayc6564/WanderSync" target="_blank">App Code</a></p>
-                <p id="the-link"><a href="disclaimer.html">App APK Download</a></p>
+                <p>Link is coming soon</p>
+            </div>
+            <p>
+                Leading the design and development of a full stack web application using <b>React and Express</b> to predict 
+                player performance from previous years' stats with Python-based analysis. Using <b>PostgreSQL and MongoDB</b> 
+                to manage user profiles and chat messages, implementing <b>JWT and Cookie-Parser</b> for secure authentication, 
+                building a real-time chat feature with <b>Socket.io</b>, and integrating a <b>chat-based AI API</b> to suggest 
+                optimal choices for players.
+            </p>
+        </div>
+
+        <!-- WanderSync -->
+        <div class="project-card">
+            <h3 class="game-title">WanderSync</h3>
+            <p class="project-dates">August 2024 - December 2024</p>
+            <div class="links">
+                <p class="the-link"><a href="https://github.com/rayc6564/WanderSync" target="_blank">App Code</a></p>
+                <p class="the-link"><a href="disclaimer.html">App APK Download</a></p>
             </div>
             <p>
                 Designed and developed an Android application 
                 using <b>Java and Firebase</b> to help users plan trips by managing reservations 
                 and vacation schedules. Collaborated with <b>3</b> backend developers to implement <b>real-time database management</b> 
                 and created a user-friendly interface that benefited <b>20+</b> Georgia Tech students.
-                <p><b>Technologies used:</b>Android Studio, Java, Groovy, Design Pattern, MVVM Architecture</p>
             </p>
-            </div>
-        <div class="college-calculator-container">
-            <h3 id="game-title">College Calculator Website</h3>
+            <p class="technologies"><b>Technologies used:</b> Android Studio, Java, Groovy, Design Pattern, MVVM Architecture</p>
+        </div>
+
+        <!-- College Calculator -->
+        <div class="project-card">
+            <h3 class="game-title">College Calculator Website</h3>
+            <p class="project-dates">May 2024 - August 2024</p>
             <div class="links">
-                <p id="web-link"><a href="https://thecollegecalculator.netlify.app/" target="_blank">WebSite Page</a></p>
-                <p id="the-link"><a href="https://github.com/rayc6564/collegecalculator.io" target="_blank">WebSite Code</a></p>
+                <p class="the-link"><a href="https://thecollegecalculator.netlify.app/" target="_blank">Website Page</a></p>
+                <p class="the-link"><a href="https://github.com/rayc6564/collegecalculator.io" target="_blank">Website Code</a></p>
             </div>
             <p>
                 Built a web application using JavaScript, HTML, and CSS to 
-                allow students to track their GPA and manage <b>unlimited classes</b>. 
+                allow students to track their GPA and manage <b>over multiple classes</b>. 
                 Conducted user <b>testing with 20 students</b>, achieving an <b>85% satisfaction</b> rate, 
                 and implemented <b>LocalStorage</b> to save user data while offering real-time grade monitoring.
-                <p><b>Technologies used:</b> JavaScript, HTML/CSS, Object-Oriented Programming</p>
             </p>
+            <p class="technologies"><b>Technologies used:</b> JavaScript, HTML/CSS, Object-Oriented Programming</p>
         </div>
-    </div>
-    <div class="projects2">
-        <div class="top-down-container">
-            <h3 id="game-title">Top Down Shooter</h3>
+
+        <!-- Top Down Shooter -->
+        <div class="project-card">
+            <h3 class="game-title">Top Down Shooter</h3>
+            <p class="project-dates">June 2023 - Auguest 2023</p>
             <div class="links">
-                <p id="the-link"><a href="https://github.com/rayc6564/Top-Down-Zombie-Shooter" target="_blank">Game Code</a></p>
+                <p class="the-link"><a href="https://github.com/rayc6564/Top-Down-Zombie-Shooter" target="_blank">Game Code</a></p>
             </div>
             <p>
                 Developed a Python-based game featuring player movement, 
                 shooting mechanics, and dynamically scaling difficulty with increasing enemy numbers. 
                 Created a real-time UI system with a health bar, ammo count, kill tracker, and high-score feature to enhance gameplay.
-                <p><b>Technologies used:</b> Python, Pygame, Object-Oriented Programming</p>
             </p>
+            <p class="technologies"><b>Technologies used:</b> Python, Pygame, Object-Oriented Programming</p>
         </div>
-        <div class="zombie-survival-container">
-            <h3 id="game-title">Zombie Survival</h3>
+
+        <!-- Zombie Survival -->
+        <div class="project-card">
+            <h3 class="game-title">Zombie Survival</h3>
+            <p class="project-dates">December 2022 - February 2023</p>
             <div class="links">
-                <p id="video-link"><a href="hhttps://youtu.be/gwkIsnyhBg8" target="_blank">Game Demo</a></p>
-                <p id="the-link"><a href="https://github.com/rayc6564/Zombie-Survival" target="_blank">Game Code</a></p>
+                <p class="the-link"><a href="https://youtu.be/gwkIsnyhBg8" target="_blank">Game Demo</a></p>
+                <p class="the-link"><a href="https://github.com/rayc6564/Zombie-Survival" target="_blank">Game Code</a></p>
             </div>
             <p>
                 Developed a 2D zombie survival game using Pygame, 
@@ -74,22 +102,26 @@
                 with custom classes for players, zombies, and the game screen, along with a UI featuring health tracking, 
                 ammo management, collision detection, and a scoring system for real-time feedback.
             </p>
-            <p><b>Technologies used:</b> Python, Pygame, Object-Oriented Programming, UI Design.</p>
+            <p class="technologies"><b>Technologies used:</b> Python, Pygame, Object-Oriented Programming, UI Design</p>
         </div>
-    </div>
-    <div class="project3">
-        <div class="num-guess-container">
-            <h3 id="game-title">Guess The Number</h3>
+
+        <!-- Guess the Number -->
+        <div class="project-card">
+            <h3 class="game-title">Guess The Number</h3>
+            <p class="project-dates">May 2022 - July 2022</p>
             <div class="links">
-                <p id="video-link"><a href="https://www.youtube.com/watch?v=8ljnZgXz0OU" target="_blank">Game Demo</a></p>
-                <p id="the-link"><a href="https://github.com/rayc6564/Number-Guessing-Game" target="_blank">Game Code</a></p>
+                <p class="the-link"><a href="https://www.youtube.com/watch?v=8ljnZgXz0OU" target="_blank">Game Demo</a></p>
+                <p class="the-link"><a href="https://github.com/rayc6564/Number-Guessing-Game" target="_blank">Game Code</a></p>
             </div>
-            Developed a Number Guessing game using Pygame featuring interactive elements. 
-            Utilized a <b>hashmap</b> for efficient management of number images and implemented comprehensive game logic, 
-            including random number generation, click detection, and win/loss conditions to enhance user experience.
-            <p><b>Technologies used:</b> Python, Pygame, Data Structures.</p>
+            <p>
+                Developed a Number Guessing game using Pygame featuring interactive elements. 
+                Utilized a <b>hashmap</b> for efficient management of number images and implemented comprehensive game logic, 
+                including random number generation, click detection, and win/loss conditions to enhance user experience.
+            </p>
+            <p class="technologies"><b>Technologies used:</b> Python, Pygame, Data Structures</p>
         </div>
     </div>    
+
     <script src="project.js"></script>
 </body>
 </html>

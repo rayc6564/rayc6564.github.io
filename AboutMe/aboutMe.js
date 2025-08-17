@@ -1,32 +1,25 @@
 const skillBtn = document.getElementById("skill-btn");
 const educationBtn = document.getElementById("education-btn");
+const educationSection = document.getElementById("education-section");
+const skillsSection = document.getElementById("skills-section");
+const menuBtn = document.getElementById("menu-btn");
+const dropdownBtns = document.querySelector(".dropdown-btns");
 
-const gtContainer = document.querySelector(".gt-container");
-const skillsToolsContainer = document.querySelector(".skills-tools-container");
+// Toggle Skills/Education visibility
+const toggleSkillsAndEducation = () => {
+  educationSection.classList.toggle("hidden");
+  skillsSection.classList.toggle("hidden");
+  skillBtn.classList.toggle("hidden");
+  educationBtn.classList.toggle("hidden");
+};
 
-const educationText = document.getElementById("education-text");
+[skillBtn, educationBtn].forEach(btn =>
+  btn.addEventListener("click", toggleSkillsAndEducation)
+);
 
-const hide = ()=>{
-    gtContainer.classList.toggle("hidden");
-    educationText.classList.toggle("hidden");
-    skillBtn.classList.toggle("hidden");
-    educationBtn.classList.toggle("hidden");
-    skillsToolsContainer.classList.toggle("hidden");
-}
-
-skillBtn.addEventListener("click", () =>{
-    hide();
-});
-
-educationBtn.addEventListener("click", () =>{
-    hide();
-})
-
-document.getElementById('menu-btn').addEventListener('click', function() {
-    const dropdown = document.querySelector('.dropdown-btns');
-    if (dropdown.style.display === 'block') {
-        dropdown.style.display = 'none';
-    } else {
-        dropdown.style.display = 'block';
-    }
+// Toggle Menu visibility
+menuBtn.addEventListener("click", () => {
+  const expanded = menuBtn.getAttribute("aria-expanded") === "true";
+  menuBtn.setAttribute("aria-expanded", String(!expanded));
+  dropdownBtns.classList.toggle("hidden");
 });

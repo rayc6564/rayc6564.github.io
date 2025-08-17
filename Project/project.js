@@ -1,8 +1,9 @@
-document.getElementById('menu-btn').addEventListener('click', function() {
-    const dropdown = document.querySelector('.dropdown-btns');
-    if (dropdown.style.display === 'block') {
-        dropdown.style.display = 'none';
-    } else {
-        dropdown.style.display = 'block';
-    }
+const menuBtn = document.getElementById('menu-btn');
+const dropdown = document.querySelector('.dropdown-btns');
+
+menuBtn.addEventListener('click', () => {
+    dropdown.classList.toggle('show'); 
+    
+    const expanded = menuBtn.getAttribute('aria-expanded') === 'true' || false;
+    menuBtn.setAttribute('aria-expanded', !expanded);
 });

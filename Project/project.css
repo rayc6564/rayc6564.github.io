@@ -1,275 +1,204 @@
+/* General page layout */
 body {
-    background: linear-gradient(to bottom, #87ceeb, #e6f7ff);
+    background: linear-gradient(to bottom, #b2b2b2, #414141);
+    color: #e0e0e0;
+    font-family: 'Times New Roman', Times, serif;
+    margin: 0;
+    padding: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    font-family: 'Times New Roman', Times, serif;
-    overflow-y: auto;
-    padding: 0 10px;
     text-align: center;
+    scroll-behavior: smooth;
 }
 
-/* Webkit Scrollbar */
+/* Scrollbar */
 ::-webkit-scrollbar {
     width: 10px;
 }
-
 ::-webkit-scrollbar-thumb {
-    background: #888;
+    background: #444;
     border-radius: 6px;
 }
-
 ::-webkit-scrollbar-thumb:hover {
-    background: #555;
+    background: #666;
 }
 
+/* Heading */
 h1 {
-    margin-top: 7rem;
+    margin-top: 6rem;
     text-align: center;
+    color: #4f4e4e;
+    font-size: 3rem;
+    letter-spacing: 1px;
 }
 
+/* Menu dropdown */
 .menu-dropdown {
     position: fixed;
     top: 0;
     width: 100%;
-    background-color: lightgray;
+    background-color: #353535;
     display: flex;
     flex-direction: column;
     align-items: center;
     z-index: 9999;
-    
+    padding: 0.5rem 0;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.6);
 }
 
-.menu-dropdown button {
-    margin: 5px;
-}
-
+/* Menu button */
 #menu-btn {
     border: none;
-    background-color: lightgray;
+    background-color: #444;
+    color: #f5f5f5;
     padding: 10px 20px;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     cursor: pointer;
+    border-radius: 8px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+#menu-btn:hover {
+    background-color: #666;
+    transform: scale(1.05);
 }
 
+/* Dropdown buttons */
 .dropdown-btns {
+    display: none;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+.dropdown-btns.show {
+    display: flex;
+}
+.dropdown-btns button {
+    border: none;
+    background-color: #555;
+    color: #f5f5f5;
+    padding: 8px 15px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s, transform 0.2s;
+}
+.dropdown-btns button:hover {
+    background-color: #777;
+    transform: scale(1.05);
+}
+
+/* Project sections */
+.projects, .projects2, .project3 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    max-width: 1000px;
+    margin: 2rem auto;
+}
+
+/* Project cards */
+.projects > div,
+.projects2 > div,
+.project3 > div {
+    background-color: #474747;
+    border: 1px solid #444;
+    border-radius: 12px;
+    padding: 25px;
+    flex: 1 1 45%;
+    min-width: 300px;
+    max-width: 450px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+    transition: transform 0.2s, background-color 0.3s, box-shadow 0.3s;
+}
+.projects > div:hover,
+.projects2 > div:hover,
+.project3 > div:hover {
+    transform: translateY(-5px);
+    background-color: #2e2e2e;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.7);
+}
+
+/* Project titles */
+#game-title, .game-title {
+    font-size: 1.7rem;
+    margin-bottom: 0.5rem;
+    text-align: center;
+    color: #ffcc66;
+    text-shadow: 1px 1px 3px #000;
+}
+
+/* Project dates */
+.project-dates {
+    font-size: 0.9rem;
+    color: #aaa;
+    margin-bottom: 12px;
+    font-style: italic;
+}
+
+/* Links */
+.links {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 15px;
+    margin: 10px 0;
 }
-
-.dropdown-btns button {
-    border-radius: 5px;
-    padding: 5px 10px;
-    font-size: 1rem;
-    cursor: pointer;
-    margin-bottom: 10px;
-}
-
-.links-container {
-    margin-top: 20px;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    gap: 20px;
-}
-
-.links-container button {
-    border-radius: 50%;
-}
-
-.external-links {
-    background: linear-gradient(to bottom, #2683a8, #e6f7ff);
-    position: fixed;
-    border: 2px solid black;
-    left: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    padding: 10px 0 10px 0;
-    border-radius: 5px;
-    border-top-left-radius: 0;
-    border-bottom-left-radius: 0;
-    border-left: none;
-}
-
-.external-links button img {
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-}
-
-.external-links button {
-    background-color: transparent;
-    border-color: aliceblue;
-}
-
-.projects, .projects2, .project3{
-    display: flex;
-    flex-direction: row;
-    gap: 50px;
-}
-
-.projects2{
-    margin-top: 50px;
-    margin-bottom: 20px;
-}
-
-#game-title{
-    display: flex;
-    justify-content: center;
-    margin-top: 2px;
-}
-
-.num-guess-container, .top-down-container, 
-.zombie-survival-container, .college-calculator-container, 
-.wandersync-container{
-    border: 2px solid;
-    border-radius: 10px;
-    width: 400px;
-    padding: 5px;
-    background: linear-gradient(to right, lightgray, #888);
-}
-
-.zombie-survival-container, .college-calculator-container{
-    background: linear-gradient(to right, #888 ,lightgray);
-}
-
-.links{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    gap: 50px;
-}
-
-#the-link, #video-link, #web-link{
-    display: flex;
-    justify-content: center;
-}
-
-#the-link a, #video-link a, #web-link a{
+.links a {
+    color: #66b2ff;
     text-decoration: none;
-    color: yellow;
+    font-weight: bold;
+    transition: color 0.3s, transform 0.2s;
+}
+.links a:hover {
+    color: #99d0ff;
+    text-decoration: underline;
+    transform: scale(1.05);
 }
 
-#the-link a:hover, #video-link a:hover, #web-link a:hover{
-    color: white
+/* Paragraph text */
+p {
+    color: #e0e0e0;
+    font-size: 1rem;
+    line-height: 1.5;
+    margin: 10px 0;
+}
+b {
+    color: #ffd966;
 }
 
-@media (min-width: 570px) and (max-width: 970px){
-    .projects, .projects2{
-        width: 600px;
-        height: 500px;
-        margin-left: 55px;
+/* Technologies / tags style */
+.technologies {
+    font-style: italic;
+    color: #aaa;
+    margin-top: 10px;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .projects, .projects2, .project3 {
+        flex-direction: column;
+        align-items: center;
     }
-}
-
-@media (max-width: 560px)  {
-    .menu-dropdown{
-        display: inline-block;
-        gap: 20px;
-        position: fixed;
-        left: 75%;
-        top: 2em;
-        background-color: transparent;
+    .projects > div,
+    .projects2 > div,
+    .project3 > div {
+        width: 90%;
     }
-    
-    #menu-btn{
-        position: relative;
-        right: 41.5%;
-        margin-bottom: 20px;
-        border-radius: 5px;
-        font-size: 15px;
+
+    #menu-btn {
+        font-size: 1rem;
         width: 100px;
     }
-    
-    .dropdown-btns{
-        display: none;
-    }
-    
-    .dropdown-btns button{
-        display: block;
-        z-index: 1;
-        border-radius: 10px;
-        width: auto;
-        margin-bottom: 10px;
-        
-        /* horizontal, vertical, blur radius, spread radius */
-        box-shadow: 0 10px 100px 10px rgba(0, 0, 0, 0.5);
-    }
-    
-    #menu-btn:focus + .dropdown-btns, .dropdown-btns:hover{
-        display: block;
-    }
-    
-    @keyframes drop-down {
-        from{
-            transform: translateY(-100vh);
-        }
-    
-        to{
-            transform: translateY(0);
-        }
-    }
-    
-    @keyframes go-up {
-        from{
-            transform: translateY(100vh);
-        }
-    
-        to{
-            transform: translateY(0);
-        }
-    }
-    
-    @keyframes to-right {
-        from{
-            transform: translateX(-100vh);
-        }
-    
-        to{
-            transform: translateX(0);
-        }
-    }
-    
-    @keyframes to-left {
-        from{
-            transform: translateX(200vh);
-        }
-    
-        to{
-            transform: translateX(0);
-        }
-    }
-    
-    #about{
-        position: relative;
-        right: 10px;
-        animation: drop-down 1s ease-in;
-    }
-    
-    #work{
-        position: relative;
-        left: 5px;
-        animation: to-right 1s ease-in;
-    }
-    
-    #contact{
-        position: relative;
-        right: 7px;
-        animation: to-left 1s ease-in;
-    }
-    
-    #resume{
-        position: relative;
-        right: 5px;
-        animation: go-up 1s ease-in;
-    }
-
-    .projects, .projects2{
+    .dropdown-btns {
         flex-direction: column;
-        width: 500px;
-        margin-left: 100px;
+        align-items: flex-start;
+    }
+    .dropdown-btns button {
+        width: auto;
+        margin-bottom: 8px;
+        box-shadow: 0 6px 20px rgba(0,0,0,0.6);
     }
 }

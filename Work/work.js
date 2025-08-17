@@ -1,48 +1,21 @@
-const chopsticksBtn = document.querySelector(".chopsticks-container");
-const chopsticksHideContainer = document.querySelector(".chopsticks-container-hide");
+const menuBtn = document.getElementById("menu-btn");
+const dropdownBtns = document.querySelector(".dropdown-btns");
 
-const petBtn = document.querySelector(".pet-container");
-const petHideContainer = document.querySelector(".pet-container-hide");
-
-const cleaningBtn = document.querySelector(".cleaning-container");
-const cleaningHideContainer = document.querySelector(".cleaning-container-hide");
-
-
-chopsticksBtn.addEventListener("click", () => {
-    chopsticksBtn.classList.add("hidden");
-    chopsticksHideContainer.classList.remove("hidden");
+// Menu toggle (same style as About Me)
+menuBtn.addEventListener("click", () => {
+  const expanded = menuBtn.getAttribute("aria-expanded") === "true";
+  menuBtn.setAttribute("aria-expanded", String(!expanded));
+  dropdownBtns.classList.toggle("hidden");
 });
 
-chopsticksHideContainer.addEventListener("click", () => {
-    chopsticksBtn.classList.remove("hidden");
-    chopsticksHideContainer.classList.add("hidden");
-})
+// Work item toggle
+document.querySelectorAll(".work-toggle").forEach(button => {
+  button.addEventListener("click", () => {
+    const detailsId = button.getAttribute("aria-controls");
+    const details = document.getElementById(detailsId);
+    const isExpanded = button.getAttribute("aria-expanded") === "true";
 
-petBtn.addEventListener("click", () => {
-    petBtn.classList.add("hidden");
-    petHideContainer.classList.remove("hidden");
-});
-
-petHideContainer.addEventListener("click", () => {
-    petBtn.classList.remove("hidden");
-    petHideContainer.classList.add("hidden");
-});
-
-cleaningBtn.addEventListener("click", () => {
-    cleaningBtn.classList.add("hidden");
-    cleaningHideContainer.classList.remove("hidden");
-});
-
-cleaningHideContainer.addEventListener("click", () => {
-    cleaningBtn.classList.remove("hidden");
-    cleaningHideContainer.classList.add("hidden");
-});
-
-document.getElementById('menu-btn').addEventListener('click', function() {
-    const dropdown = document.querySelector('.dropdown-btns');
-    if (dropdown.style.display === 'block') {
-        dropdown.style.display = 'none';
-    } else {
-        dropdown.style.display = 'block';
-    }
+    button.setAttribute("aria-expanded", String(!isExpanded));
+    details.classList.toggle("hidden");
+  });
 });
