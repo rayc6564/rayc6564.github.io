@@ -252,6 +252,21 @@ b {
     background-color: #555;
 }
 
+.check_book {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 15px;
+    background-color: #66b2ff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: background-color 0.3s;
+}
+
+.check_book:hover {
+    background-color: lightcoral;
+}
+
 /* Responsive */
 @media (max-width: 768px) {
     .container-left,
